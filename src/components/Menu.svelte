@@ -16,7 +16,6 @@
 <div class="relative h-full flex items-center justify-center overflow-hidden">
   <div class="relative w-full h-full max-w-7xl p-5">
     <div class="relative grid grid-cols-4 gap-5 lg:grid-rows-2">
-      <!-- Crear estudiante: 2 columnas, 2 filas -->
       <a
         href="/create"
         class="group block rounded-2xl border transition-all duration-200 ease-out p-12 hover:border-zinc-600 hover:shadow-lg hover:shadow-zinc-900/20 lg:col-span-2
@@ -66,6 +65,13 @@
       <!-- Ver estudiantes: 2 columnas, 2 filas, SOLO un div, sin borde externo, para el bento grid -->
       <div class="lg:col-span-2 lg:row-span-2 flex flex-col h-full">
         <ListStudents bento />
+      </div>
+
+      <div class="group block rounded-2xl border transition-all duration-200 ease-out p-12 hover:border-zinc-600 hover:shadow-lg hover:shadow-zinc-900/20 col-span-2
+          {active === '/create'
+          ? 'border-zinc-500 bg-zinc-900/50'
+          : 'border-zinc-800 bg-zinc-900/30 hover:bg-zinc-900/50'}">
+        <h3>Instrucciones</h3>
       </div>
     </div>
   </div>
