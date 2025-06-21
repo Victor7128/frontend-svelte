@@ -1,7 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import CreateForm from '../components/Create.svelte';
 ---
 
 <Layout title="Crear Estudiante" description="Formulario para crear un nuevo estudiante">
-	
+	<div class="relative h-screen flex justify-center items-center w-full overflow-hidden">
+		<CreateForm client:idle/>
+	</div>
 </Layout>
